@@ -1,0 +1,128 @@
+/* ── Topic Page ─────────────────────────────── */
+.topic-page {
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.topic-breadcrumb {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+}
+
+.topic-breadcrumb a {
+  color: var(--text-muted);
+}
+
+.topic-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.topic-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* ── Sections ─────────────────────────────── */
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.section h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  margin-top: 1.5rem;
+  color: var(--text);
+}
+
+.section p {
+  margin-bottom: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.section ul,
+.section ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  color: var(--text-muted);
+}
+
+.section li {
+  margin-bottom: 0.4rem;
+  line-height: 1.65;
+}
+
+.section strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ── Navigation between topics ─────────────── */
+.topic-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.topic-nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: all 0.15s ease;
+  min-width: 0;
+  max-width: 48%;
+}
+
+.topic-nav-link:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent);
+}
+
+.topic-nav-link.next {
+  margin-left: auto;
+  text-align: right;
+}
+
+.topic-nav-label {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.topic-nav-title {
+  font-size: 0.95rem;
+  color: var(--accent);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
