@@ -25,13 +25,13 @@ Built from Colt Steele's "JS Algorithms and Data Structures Masterclass" course 
 ## Running Locally
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
 ## Tech Stack
 
-- React 19 + Vite 7
+- React 19 + Vite 8
 - React Router v7
 - Prism React Renderer
 - Lucide React

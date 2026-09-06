@@ -2,19 +2,25 @@ import { NavLink, Link, useLocation } from "react-router-dom";
 import { topics } from "../data/topics";
 import { Menu, X } from "lucide-react";
 import * as Icons from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Sidebar() {
-  const [open, setOpen] = useState(false);
   const location = useLocation();
+  return <SidebarContent key={location.key} />;
+}
 
-  useEffect(() => {
-    setOpen(false);
-  }, [location]);
+function SidebarContent() {
+  const [open, setOpen] = useState(false);
 
   return (
     <>
-      <button className="mobile-toggle" onClick={() => setOpen(!open)}>
+      <button
+        className="mobile-toggle"
+        aria-label={open ? "Close navigation" : "Open navigation"}
+        aria-expanded={open}
+        aria-controls="sidebar-navigation"
+        onClick={() => setOpen(!open)}
+      >
         {open ? <X size={20} /> : <Menu size={20} />}
       </button>
 
@@ -23,7 +29,7 @@ export default function Sidebar() {
         onClick={() => setOpen(false)}
       />
 
-      <aside className={`sidebar ${open ? "open" : ""}`}>
+      <aside id="sidebar-navigation" className={`sidebar ${open ? "open" : ""}`}>
         <div className="sidebar-header">
           <Link to="/" className="sidebar-logo">
             <h1>
